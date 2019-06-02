@@ -1,5 +1,4 @@
-import { Model,Table,Column, DataType, HasMany } from "sequelize-typescript";
-import Vote from "./vote";
+import { Model,Table,Column, DataType } from "sequelize-typescript";
 
 @Table({
     freezeTableName: true
@@ -9,9 +8,6 @@ class User extends Model<User> {
     email: string;
     @Column(DataType.STRING)
     password: string;
-
-    @HasMany(() => Vote)
-    votes: Vote[];
 }
 
 export default User;

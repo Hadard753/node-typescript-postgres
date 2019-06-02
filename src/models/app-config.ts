@@ -3,7 +3,6 @@ import { Model } from 'mongoose';
 
 export interface AppConfig {
     ENVIRONMENT: string;
-    DB_URI: string;
     CLIENT_URL: string;
     JWT_SECRET: string;
     SOCIAL_CREDENTAILS: {};

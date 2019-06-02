@@ -6,7 +6,6 @@ import {
   LoginActionResponse
 } from './../../shared/models';
 
-import * as responses from './responses';
 import User from '../db-models/user';
 import auth from '../auth';
 import { RegisterForm } from './forms';

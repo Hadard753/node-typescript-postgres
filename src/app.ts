@@ -47,28 +47,6 @@ export class App {
 
   private mountPostMiddlewares(): void {}
 
-  // /**
-  //  * Mounts angular using Server-Side-Rendering (Recommended for SEO)
-  //  */
-  // private mountAngularSSR(): void {
-  //   const DIST_FOLDER = path.join(__dirname, 'dist');
-  //   const ngApp = require(path.join(DIST_FOLDER, 'server'));
-  //   ngApp.init(this.express, DIST_FOLDER);
-  // }
-
-  // /**
-  //  * Mounts angular as is with no SSR.
-  //  */
-  // private mountAngular(): void {
-  //   // Point static path to Angular 2 distribution
-  //   this.express.use(express.static(path.join(__dirname, 'dist/browser')));
-
-  //   // Deliever the Angular 2 distribution
-  //   this.express.get('*', function(req, res) {
-  //     res.sendFile(path.join(__dirname, 'dist/browser/index.html'));
-  //   });
-  // }
-
   private mountRoutes(): void {
     this.express.use('/api', require('./api/routes'));
   }
